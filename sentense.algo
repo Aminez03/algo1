@@ -1,0 +1,28 @@
+ALGORITHM sentense
+VAR
+    ch:string;
+    i:INTEGER=0;
+    cont_words:INTEGER=1;
+    cont_vol:INTEGER=0;
+    cont_char:INTEGER=1;
+
+
+BEGIN
+    Read(ch)
+    WHILE (ch[i]<>".") DO
+        i:=i+1;
+        cont_char:=cont_char+1;
+        IF (ch[i]=" ") THEN
+        cont_words:=cont_words+1;
+        END_IF
+        IF (ch[i]="a"OR ch[i]="A"OR ch[i]="e"OR ch[i]="E"OR ch[i]="i"OR ch[i]="I"OR ch[i]="o"OR ch[i]="O"OR ch[i]="u"OR ch[i]="U"OR ) THEN
+        cont_vol:=cont_vol+1;   
+        END_IF
+
+
+       
+    END_WHILE
+    Write("The of words is:" ,cont_words)
+    Write("The of caracter is:" ,cont_char)
+    Write("The of voiyelles is:" ,cont_vol)
+END
